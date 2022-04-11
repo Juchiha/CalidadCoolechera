@@ -18,3 +18,14 @@ C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\De
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.genruntimeconfig.cache
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\ref\CalidadCoolecheraForms.dll
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ParametrosForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\Dapper.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\Npgsql.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\CalidadCoolecheraAcceso.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\CalidadCoolecheraModelos.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\CalidadCoolecheraAcceso.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\CalidadCoolecheraModelos.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.csproj.CopyComplete
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.BonificacionForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.CalidadCDAForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ConfiguracionForm.resources

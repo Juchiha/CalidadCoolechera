@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,15 +59,58 @@
             this.groupBox1.Text = "Menu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // pictureBox1
+            // button6
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.Location = new System.Drawing.Point(6, 361);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(269, 35);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Bonificación";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button5.Location = new System.Drawing.Point(6, 320);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(269, 35);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Calidad De La Leche";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(6, 279);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(269, 35);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Calidad CDA";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(6, 238);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(269, 35);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Control de Calidad";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(6, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(269, 35);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Configuración de Calidad";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -80,55 +123,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // pictureBox1
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(6, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(269, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Configuración de Calidad";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(6, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(269, 35);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Control de Calidad";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(6, 279);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(269, 35);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Calidad CDA";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.Location = new System.Drawing.Point(6, 320);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 35);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Calidad De La Leche";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Location = new System.Drawing.Point(6, 361);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(269, 35);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Bonificación";
-            this.button6.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(269, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Principal
             // 

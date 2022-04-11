@@ -1,0 +1,15 @@
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\bin\Debug\net5.0\CalidadCoolecheraAcceso.deps.json
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\bin\Debug\net5.0\CalidadCoolecheraAcceso.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\bin\Debug\net5.0\CalidadCoolecheraAcceso.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\bin\Debug\net5.0\CalidadCoolecheraModelos.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\bin\Debug\net5.0\CalidadCoolecheraModelos.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.csproj.AssemblyReference.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.AssemblyInfoInputs.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.AssemblyInfo.cs
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.csproj.CoreCompileInputs.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.csproj.CopyComplete
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\refint\CalidadCoolecheraAcceso.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\CalidadCoolecheraAcceso.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraAcceso\obj\Debug\net5.0\ref\CalidadCoolecheraAcceso.dll

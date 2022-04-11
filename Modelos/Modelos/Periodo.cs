@@ -9,22 +9,22 @@ namespace CalidadModelos.Modelos
     public class Periodo
     {
         public string ds_periodoliquidacion { get; set; }
-        public string am_numeroliquidacion { get; set; }
+        public int am_numeroliquidacion { get; set; }
         public string ds_estadoperiodo { get; set;}
         public string ds_usuariocreacion { get; set; }
         public string ds_equipocreacion { get; set;}
-        public string dt_fechacreacion { get; set;}
+        public DateTime dt_fechacreacion { get; set;}
         public string ds_programacreacion { get; set;}  
         public string ds_usuariomodificacion { get; set;  }
         public string ds_equipomodificacion { get; set; }
-        public string dt_fechamodificacion { get; set; }
+        public DateTime dt_fechamodificacion { get; set; }
         public string ds_programamodificacion { get; set; }
         public Periodo()
         {
 
         }
 
-        public Periodo(string ds_periodoliquidacion, string am_numeroliquidacion, string ds_estadoperiodo, string ds_usuariocreacion, string ds_equipocreacion, string dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, string dt_fechamodificacion, string ds_programamodificacion)
+        public Periodo(string ds_periodoliquidacion, int am_numeroliquidacion, string ds_estadoperiodo, string ds_usuariocreacion, string ds_equipocreacion, DateTime dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, DateTime dt_fechamodificacion, string ds_programamodificacion)
         {
             this.ds_periodoliquidacion = ds_periodoliquidacion;
             this.am_numeroliquidacion = am_numeroliquidacion;

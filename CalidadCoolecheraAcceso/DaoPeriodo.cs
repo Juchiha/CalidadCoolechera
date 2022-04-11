@@ -27,29 +27,29 @@ namespace CalidadCoolecheraAcceso
 
         public List<Periodo> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT * FROM periodos";
+            var Lsql = "SELECT * FROM calidad.periodos";
             var periodos = pConexion.Conexion.Query<Periodo>(Lsql, transaction).ToList();
             return periodos;
         }
 
         public Periodo buscar(string ds_periodoliquidacion, IDbTransaction transaction = null)
         {
-            var strSQl = "select * from periodos where ds_periodoliquidacion = @ds_periodoliquidacion";
+            var strSQl = "select * from calidad.periodos where ds_periodoliquidacion = @ds_periodoliquidacion";
             var Periodo = pConexion.Conexion.QueryFirst<Periodo>(strSQl, new { ds_periodoliquidacion = ds_periodoliquidacion }, transaction);
             return Periodo;
         }
 
         public int Insertar(Periodo periodo, IDbTransaction transaction = null)
         {
-            var strSQl = @"INSERT INTO periodos(ds_periodoliquidacion, am_numeroliquidacion, ds_estadoperiodo, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion) 
-                           VALUES (@ds_periodoliquidacion, @am_numeroliquidacion, @ds_estadoperiodo, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion)  ";
+            var strSQl = @"INSERT INTO calidad.periodos(ds_periodoliquidacion, am_numeroliquidacion, ds_estadoperiodo, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion, ds_usuariomodificacion, ds_equipomodificacion, dt_fechamodificacion , ds_programamodificacion) 
+                           VALUES (@ds_periodoliquidacion, @am_numeroliquidacion, @ds_estadoperiodo, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion, @ds_usuariomodificacion, @ds_equipomodificacion, @dt_fechamodificacion , @ds_programamodificacion)  ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, periodo, transaction);
             return nroFilasAfectadas;
         }
 
         public int Actualizar(Periodo periodo, IDbTransaction transaction = null)
         {
-            var strSQl = @"UPDATE periodos SET am_numeroliquidacion = @am_numeroliquidacion, ds_estadoperiodo = @ds_estadoperiodo, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion  
+            var strSQl = @"UPDATE calidad.periodos SET am_numeroliquidacion = @am_numeroliquidacion, ds_estadoperiodo = @ds_estadoperiodo, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion  
                            WHERE ds_periodoliquidacion= @ds_periodoliquidacion";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, periodo, transaction);
             return nroFilasAfectadas;
@@ -57,7 +57,7 @@ namespace CalidadCoolecheraAcceso
 
         public int Borrar(Periodo periodo, IDbTransaction transaction = null)
         {
-            var strSQl = @"DELETE FROM periodos WHERE ds_periodoliquidacion= @ds_periodoliquidacion";
+            var strSQl = @"DELETE FROM calidad.periodos WHERE ds_periodoliquidacion= @ds_periodoliquidacion";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, periodo, transaction);
             return nroFilasAfectadas;
         }

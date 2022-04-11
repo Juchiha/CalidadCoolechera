@@ -14,11 +14,11 @@ namespace CalidadModelos.Modelos
 		public string ds_descripcionvariable { get; set; }
 		public string ds_usuariocreacion { get; set; }
 		public string ds_equipocreacion { get; set; }
-		public string dt_fechacreacion { get; set; }
+		public DateTime dt_fechacreacion { get; set; }
 		public string ds_programacreacion { get; set; }
 		public string ds_usuariomodificacion { get; set; }
 		public string ds_equipomodificacion { get; set; }
-		public string dt_fechamodificacion { get; set; }
+		public DateTime dt_fechamodificacion { get; set; }
 		public string ds_programamodificacion { get; set; }
 
 		public ConfiguracionCalidad()
@@ -26,7 +26,7 @@ namespace CalidadModelos.Modelos
 
 		}
 
-        public ConfiguracionCalidad(string cd_codigovariable, string ds_tipovariable, string ds_valorvariable, string ds_descripcionvariable, string ds_usuariocreacion, string ds_equipocreacion, string dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, string dt_fechamodificacion, string ds_programamodificacion)
+        public ConfiguracionCalidad(string cd_codigovariable, string ds_tipovariable, string ds_valorvariable, string ds_descripcionvariable, string ds_usuariocreacion, string ds_equipocreacion, DateTime dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, DateTime dt_fechamodificacion, string ds_programamodificacion)
         {
             this.cd_codigovariable = cd_codigovariable;
             this.ds_tipovariable = ds_tipovariable;

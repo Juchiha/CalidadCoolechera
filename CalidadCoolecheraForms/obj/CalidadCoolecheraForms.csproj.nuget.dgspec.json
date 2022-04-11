@@ -4,6 +4,74 @@
     "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraForms\\CalidadCoolecheraForms.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj",
+        "projectName": "CalidadCoolecheraAcceso",
+        "projectPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj",
+        "packagesPath": "C:\\Users\\Jose Giron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jose Giron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj": {
+                "projectPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraForms\\CalidadCoolecheraForms.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +95,14 @@
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj": {
+                "projectPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj"
+              },
+              "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj": {
+                "projectPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -55,6 +130,60 @@
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj",
+        "projectName": "CalidadCoolecheraModelos",
+        "projectPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\CalidadCoolecheraModelos.csproj",
+        "packagesPath": "C:\\Users\\Jose Giron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\Modelos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Jose Giron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"

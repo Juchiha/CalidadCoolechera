@@ -1,0 +1,12 @@
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\bin\Debug\net5.0\CalidadCoolecheraModelos.deps.json
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\bin\Debug\net5.0\CalidadCoolecheraModelos.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\bin\Debug\net5.0\CalidadCoolecheraModelos.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.csproj.AssemblyReference.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.AssemblyInfoInputs.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.AssemblyInfo.cs
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.csproj.CoreCompileInputs.cache
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\refint\CalidadCoolecheraModelos.dll
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\CalidadCoolecheraModelos.pdb
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\Modelos\obj\Debug\net5.0\ref\CalidadCoolecheraModelos.dll

@@ -27,21 +27,21 @@ namespace CalidadCoolecheraAcceso
 
         public List<ConfiguracionCalidad> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT * FROM configuracion_calidad";
+            var Lsql = "SELECT * FROM calidad.configuracion_calidad";
             var calidad_cda = pConexion.Conexion.Query<ConfiguracionCalidad>(Lsql, transaction).ToList();
             return calidad_cda;
         }
 
         public ConfiguracionCalidad buscar(string ds_codigo, IDbTransaction transaction = null)
         {
-            var strSQl = "select * from configuracion_calidad where cd_codigovariable = @cd_codigovariable";
+            var strSQl = "select * from calidad.configuracion_calidad where cd_codigovariable = @cd_codigovariable";
             var Calidad_Leche = pConexion.Conexion.QueryFirst<ConfiguracionCalidad>(strSQl, new { ds_codigo = ds_codigo }, transaction);
             return Calidad_Leche;
         }
 
         public int Insertar(ConfiguracionCalidad Calidad_Leche, IDbTransaction transaction = null)
         {
-            var strSQl = @"INSERT INTO configuracion_calidad(cd_codigovariable, ds_tipovariable, ds_valorvariable, ds_descripcionvariable, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion) 
+            var strSQl = @"INSERT INTO calidad.configuracion_calidad(cd_codigovariable, ds_tipovariable, ds_valorvariable, ds_descripcionvariable, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion) 
                            VALUES (@cd_codigovariable, @ds_tipovariable, @ds_valorvariable, @ds_descripcionvariable, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion)  ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, Calidad_Leche, transaction);
             return nroFilasAfectadas;
@@ -49,7 +49,7 @@ namespace CalidadCoolecheraAcceso
 
         public int Actualizar(ConfiguracionCalidad Calidad_Leche, IDbTransaction transaction = null)
         {
-            var strSQl = @"UPDATE configuracion_calidad SET cd_codigovariable = @cd_codigovariable, ds_tipovariable = @ds_tipovariable, ds_valorvariable = @ds_valorvariable, ds_descripcionvariable = @ds_descripcionvariable, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion
+            var strSQl = @"UPDATE calidad.configuracion_calidad SET cd_codigovariable = @cd_codigovariable, ds_tipovariable = @ds_tipovariable, ds_valorvariable = @ds_valorvariable, ds_descripcionvariable = @ds_descripcionvariable, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion
                            WHERE cd_codigovariable= @cd_codigovariable";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, Calidad_Leche, transaction);
             return nroFilasAfectadas;
@@ -57,7 +57,7 @@ namespace CalidadCoolecheraAcceso
 
         public int Borrar(ConfiguracionCalidad Calidad_Leche, IDbTransaction transaction = null)
         {
-            var strSQl = @"DELETE FROM configuracion_calidad WHERE cd_codigovariable= @cd_codigovariable";
+            var strSQl = @"DELETE FROM calidad.configuracion_calidad WHERE cd_codigovariable= @cd_codigovariable";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, Calidad_Leche, transaction);
             return nroFilasAfectadas;
         }

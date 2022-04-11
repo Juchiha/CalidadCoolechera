@@ -19,7 +19,7 @@ namespace CalidadCoolecheraForms
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            this.StartPosition = FormStartPosition.CenterParent;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -34,5 +34,28 @@ namespace CalidadCoolecheraForms
             frmPeriodos.ShowDialog();
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var frmBonificacion = new BonificacionForm();
+            frmBonificacion.StartPosition = FormStartPosition.CenterParent;
+            frmBonificacion.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var frmCalidadCDA = new CalidadCDAForm();
+            frmCalidadCDA.StartPosition = FormStartPosition.CenterParent;
+            frmCalidadCDA.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var frmControlVariables = new ConfiguracionForm();
+            frmControlVariables.StartPosition = FormStartPosition.CenterParent;
+            frmControlVariables.ShowDialog();
+        }
+
+
     }
 }

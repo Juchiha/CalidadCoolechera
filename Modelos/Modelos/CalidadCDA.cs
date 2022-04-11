@@ -15,18 +15,18 @@ namespace CalidadModelos.Modelos
 		public int am_valorunidadformadoracolonias { get; set; }
 		public string ds_usuariocreacion { get; set; }
 		public string ds_equipocreacion { get; set; }
-		public string dt_fechacreacion { get; set; }
+		public DateTime dt_fechacreacion { get; set; }
 		public string ds_programacreacion { get; set; }
 		public string ds_usuariomodificacion { get; set; }
 		public string ds_equipomodificacion { get; set; }
-		public string dt_fechamodificacion { get; set; }
+		public DateTime dt_fechamodificacion { get; set; }
 		public string ds_programamodificacion { get; set; }
 		public CalidadCDA()
         {
 
         }
 
-        public CalidadCDA(int cd_codigocda, string ds_periodoliquidacion, int am_numeroliquidacion, int am_valorsolidostotales, int am_valorunidadformadoracolonias, string ds_usuariocreacion, string ds_equipocreacion, string dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, string dt_fechamodificacion, string ds_programamodificacion)
+        public CalidadCDA(int cd_codigocda, string ds_periodoliquidacion, int am_numeroliquidacion, int am_valorsolidostotales, int am_valorunidadformadoracolonias, string ds_usuariocreacion, string ds_equipocreacion, DateTime dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, DateTime dt_fechamodificacion, string ds_programamodificacion)
         {
             this.cd_codigocda = cd_codigocda;
             this.ds_periodoliquidacion = ds_periodoliquidacion;
