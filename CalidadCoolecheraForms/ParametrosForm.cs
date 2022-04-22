@@ -46,10 +46,40 @@ namespace CalidadCoolecheraForms
         private void enlazarControles()
         {
             dgv.DataSource = bs;
-            dgv.AutoGenerateColumns = true;
+            dgv.AutoGenerateColumns = false;
+            DataGridViewColumn column3 = dgv.Columns[3];
+            DataGridViewColumn column4 = dgv.Columns[4];
+            DataGridViewColumn column5 = dgv.Columns[5];
+            DataGridViewColumn column6 = dgv.Columns[6];
+            DataGridViewColumn column7 = dgv.Columns[7];
+            DataGridViewColumn column8 = dgv.Columns[8];
+            DataGridViewColumn column9 = dgv.Columns[9];
+            DataGridViewColumn column10 = dgv.Columns[10];
+            column3.Visible = false;
+            column4.Visible = false;
+            column5.Visible = false;
+            column6.Visible = false;
+            column7.Visible = false;
+            column8.Visible = false;
+            column9.Visible = false;
+            column10.Visible = false;
+
+            DataGridViewColumn column0 = dgv.Columns[0];
+            DataGridViewColumn column1 = dgv.Columns[1];
+            DataGridViewColumn column2 = dgv.Columns[2];
+            DataGridViewColumn column11 = dgv.Columns[11];
+            column0.HeaderText = "Periodo Liquidación";
+            column1.HeaderText = "Numero Liquidación";
+            column2.HeaderText = "Estado Periodo CDA";
+            column11.HeaderText = "Estado Periodo Asociado";
+            column0.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill; 
+            column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column11.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             txtPeriodoLiquidacion.DataBindings.Add("Text", bs, "ds_periodoliquidacion");
             txtNumeroPeriodo.DataBindings.Add("Text", bs, "am_numeroliquidacion");
-            txtEstadoPeriodo.DataBindings.Add("Text", bs, "ds_estadoperiodo");
+            txtEstadoPeriodoCda.DataBindings.Add("Text", bs, "ds_estadoperiodocda");
+            txtEstadoAsociado.DataBindings.Add("Text", bs, "ds_estadoperiodoasociado");
             dgv.AllowUserToAddRows = false;
         }
 
@@ -160,6 +190,11 @@ namespace CalidadCoolecheraForms
             {
                 MessageBox.Show("Error no controlado " + ex.Message);
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

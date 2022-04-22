@@ -1,6 +1,6 @@
 ﻿namespace CalidadCoolecheraForms
 {
-    partial class ParametrosForm
+    partial class ControlCalidadForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParametrosForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlCalidadForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBorrarInfo = new System.Windows.Forms.Button();
             this.btnGuardarInfo = new System.Windows.Forms.Button();
             this.btnNuevoRegistro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtEstadoPeriodoCda = new System.Windows.Forms.TextBox();
+            this.txtEstadoLiquidacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumeroPeriodo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPeriodoLiquidacion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.txtEstadoAsociado = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,9 +60,9 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 482);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Periodos";
+            this.groupBox1.Text = "Control de Calidad";
             // 
             // pictureBox1
             // 
@@ -82,7 +80,7 @@
             this.btnBorrarInfo.Name = "btnBorrarInfo";
             this.btnBorrarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnBorrarInfo.TabIndex = 4;
-            this.btnBorrarInfo.Text = "Borrar Periodo";
+            this.btnBorrarInfo.Text = "Borrar Registro";
             this.btnBorrarInfo.UseVisualStyleBackColor = true;
             this.btnBorrarInfo.Click += new System.EventHandler(this.btnBorrarInfo_Click);
             // 
@@ -92,7 +90,7 @@
             this.btnGuardarInfo.Name = "btnGuardarInfo";
             this.btnGuardarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnGuardarInfo.TabIndex = 3;
-            this.btnGuardarInfo.Text = "Guardar Periodo";
+            this.btnGuardarInfo.Text = "Guardar Registro";
             this.btnGuardarInfo.UseVisualStyleBackColor = true;
             this.btnGuardarInfo.Click += new System.EventHandler(this.btnGuardarInfo_Click);
             // 
@@ -102,15 +100,13 @@
             this.btnNuevoRegistro.Name = "btnNuevoRegistro";
             this.btnNuevoRegistro.Size = new System.Drawing.Size(255, 31);
             this.btnNuevoRegistro.TabIndex = 2;
-            this.btnNuevoRegistro.Text = "Nuevo Periodo";
+            this.btnNuevoRegistro.Text = "Nuevo Registro";
             this.btnNuevoRegistro.UseVisualStyleBackColor = true;
-            this.btnNuevoRegistro.Click += new System.EventHandler(this.button1_Click);
+            this.btnNuevoRegistro.Click += new System.EventHandler(this.btnNuevoRegistro_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtEstadoAsociado);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtEstadoPeriodoCda);
+            this.groupBox2.Controls.Add(this.txtEstadoLiquidacion);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtNumeroPeriodo);
             this.groupBox2.Controls.Add(this.label2);
@@ -122,23 +118,22 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // txtEstadoPeriodoCda
+            // txtEstadoLiquidacion
             // 
-            this.txtEstadoPeriodoCda.Location = new System.Drawing.Point(6, 163);
-            this.txtEstadoPeriodoCda.Name = "txtEstadoPeriodoCda";
-            this.txtEstadoPeriodoCda.Size = new System.Drawing.Size(243, 29);
-            this.txtEstadoPeriodoCda.TabIndex = 5;
+            this.txtEstadoLiquidacion.Location = new System.Drawing.Point(6, 163);
+            this.txtEstadoLiquidacion.Name = "txtEstadoLiquidacion";
+            this.txtEstadoLiquidacion.Size = new System.Drawing.Size(243, 29);
+            this.txtEstadoLiquidacion.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 22);
+            this.label3.Size = new System.Drawing.Size(124, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Estado Periodo CDA";
+            this.label3.Text = "Estado Liquidación";
             // 
             // txtNumeroPeriodo
             // 
@@ -171,7 +166,6 @@
             this.label1.Size = new System.Drawing.Size(129, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Periodo Liquidación";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgv
             // 
@@ -182,31 +176,15 @@
             this.dgv.Size = new System.Drawing.Size(503, 448);
             this.dgv.TabIndex = 0;
             // 
-            // txtEstadoAsociado
-            // 
-            this.txtEstadoAsociado.Location = new System.Drawing.Point(6, 219);
-            this.txtEstadoAsociado.Name = "txtEstadoAsociado";
-            this.txtEstadoAsociado.Size = new System.Drawing.Size(243, 29);
-            this.txtEstadoAsociado.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 194);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 22);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Estado Periodo Asociado";
-            // 
-            // ParametrosForm
+            // ControlCalidadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 506);
+            this.ClientSize = new System.Drawing.Size(800, 502);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ParametrosForm";
-            this.Text = "ParametrosForm";
-            this.Load += new System.EventHandler(this.ParametrosForm_Load);
+            this.Name = "ControlCalidadForm";
+            this.Text = "ControlCalidad";
+            this.Load += new System.EventHandler(this.ControlCalidad_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -219,19 +197,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtPeriodoLiquidacion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnBorrarInfo;
+        private System.Windows.Forms.Button btnGuardarInfo;
         private System.Windows.Forms.Button btnNuevoRegistro;
-        private System.Windows.Forms.TextBox txtEstadoPeriodoCda;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtEstadoLiquidacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumeroPeriodo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBorrarInfo;
-        private System.Windows.Forms.Button btnGuardarInfo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtEstadoAsociado;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPeriodoLiquidacion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

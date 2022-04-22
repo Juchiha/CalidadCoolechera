@@ -12,27 +12,22 @@ using CalidadModelos.Modelos;
 
 namespace CalidadCoolecheraForms
 {
-    public partial class CalidadCDAForm : Form
+    public partial class ControlCalidadForm : Form
     {
-        private DaoCalidadCDA dCalidadCda;
+        private DaoControlCalidad dControl;
         private BindingSource bs = new BindingSource();
         private bool esNuevoRegistro = false;
 
-        public CalidadCDAForm()
+        public ControlCalidadForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CalidadCDAForm_Load(object sender, EventArgs e)
+        private void ControlCalidad_Load(object sender, EventArgs e)
         {
             var cadenaconexion = Properties.Settings.Default.Properties["cadenaconexion"].DefaultValue.ToString();
-            dCalidadCda = new DaoCalidadCDA(cadenaconexion);
-            bs.DataSource = dCalidadCda.Listar();
+            dControl = new DaoControlCalidad(cadenaconexion);
+            bs.DataSource = dControl.Listar();
             enlazarControles();
         }
 
@@ -40,43 +35,36 @@ namespace CalidadCoolecheraForms
         {
             dgv.DataSource = bs;
             dgv.AutoGenerateColumns = false;
-
+            DataGridViewColumn column3 = dgv.Columns[3];
+            DataGridViewColumn column4 = dgv.Columns[4];
             DataGridViewColumn column5 = dgv.Columns[5];
             DataGridViewColumn column6 = dgv.Columns[6];
             DataGridViewColumn column7 = dgv.Columns[7];
             DataGridViewColumn column8 = dgv.Columns[8];
             DataGridViewColumn column9 = dgv.Columns[9];
             DataGridViewColumn column10 = dgv.Columns[10];
-            DataGridViewColumn column11 = dgv.Columns[11];
-            DataGridViewColumn column12 = dgv.Columns[12];
-            column12.Visible = false;
+            column3.Visible = false;
+            column4.Visible = false;
             column5.Visible = false;
             column6.Visible = false;
             column7.Visible = false;
             column8.Visible = false;
             column9.Visible = false;
             column10.Visible = false;
-            column11.Visible = false;
+
             DataGridViewColumn column0 = dgv.Columns[0];
             DataGridViewColumn column1 = dgv.Columns[1];
             DataGridViewColumn column2 = dgv.Columns[2];
-            DataGridViewColumn column3 = dgv.Columns[3];
-            DataGridViewColumn column4 = dgv.Columns[4];
-            column0.HeaderText = "Codigo Calidad";
-            column1.HeaderText = "Periodo Liquidación";
-            column2.HeaderText = "Numero Liquidación";
-            column3.HeaderText = "Valor Solidos Totales";
-            column4.HeaderText = "Valor Unidad F Colonias";
+            column0.HeaderText = "Periodo Liquidación";
+            column1.HeaderText = "Numero Liquidación";
+            column2.HeaderText = "Estado Liquidación";
+
             column0.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            txtCodigoCalidad.DataBindings.Add("Text", bs, "cd_codigocda");
-            txtPeriodoCalidad.DataBindings.Add("Text", bs, "ds_periodoliquidacion");
-            txtNumeroLiquidacion.DataBindings.Add("Text", bs, "am_numeroliquidacion");
-            txtValorSolidosTotales.DataBindings.Add("Text", bs, "am_valorsolidostotales");
-            txtUnidadFormadoraCol.DataBindings.Add("Text", bs, "am_valorunidadformadoracolonias");
+            txtPeriodoLiquidacion.DataBindings.Add("Text", bs, "ds_periodoliquidacion");
+            txtNumeroPeriodo.DataBindings.Add("Text", bs, "am_numeroliquidacion");
+            txtEstadoLiquidacion.DataBindings.Add("Text", bs, "ds_estadoliquidacion");
             dgv.AllowUserToAddRows = false;
         }
 
@@ -84,33 +72,33 @@ namespace CalidadCoolecheraForms
         {
             if (bs.Current == null)
             {
-                MessageBox.Show("Registro no existe");
+                MessageBox.Show("Periodo no existe");
             }
             else
             {
-                var calidadCDA = (CalidadCDA)bs.Current;
+                var controlCal = (ControlCalidad)bs.Current;
                 if (esNuevoRegistro)
                 {
                     //se crea un nuevo registro
-                    calidadCDA.ds_equipocreacion = Users.EQUIPO___;
-                    calidadCDA.ds_usuariocreacion = Users.USUARIO__;
-                    calidadCDA.dt_fechacreacion = DateTime.Now;
-                    calidadCDA.dt_fechamodificacion = DateTime.Now;
-                    calidadCDA.ds_equipomodificacion = Users.EQUIPO___;
-                    calidadCDA.ds_usuariomodificacion = Users.USUARIO__;
-                    calidadCDA.ds_programacreacion = Users.PROGRAMA_;
-                    calidadCDA.ds_programamodificacion = Users.PROGRAMA_;
-                    int resultado = dCalidadCda.Insertar(calidadCDA);
+                    controlCal.ds_equipocreacion = Users.EQUIPO___;
+                    controlCal.ds_usuariocreacion = Users.USUARIO__;
+                    controlCal.dt_fechacreacion = DateTime.Now;
+                    controlCal.dt_fechamodificacion = DateTime.Now;
+                    controlCal.ds_equipomodificacion = Users.EQUIPO___;
+                    controlCal.ds_usuariomodificacion = Users.USUARIO__;
+                    controlCal.ds_programacreacion = Users.PROGRAMA_;
+                    controlCal.ds_programamodificacion = Users.PROGRAMA_;
+                    int resultado = dControl.Insertar(controlCal);
                     MessageBox.Show("Nuevo registro creado");
                 }
                 else
                 {
                     //se actualiza el registro actual
-                    calidadCDA.dt_fechamodificacion = DateTime.Now;
-                    calidadCDA.ds_equipomodificacion = Users.EQUIPO___;
-                    calidadCDA.ds_usuariomodificacion = Users.USUARIO__;
-                    calidadCDA.ds_programamodificacion = Users.PROGRAMA_;
-                    dCalidadCda.Actualizar(calidadCDA);
+                    controlCal.dt_fechamodificacion = DateTime.Now;
+                    controlCal.ds_equipomodificacion = Users.EQUIPO___;
+                    controlCal.ds_usuariomodificacion = Users.USUARIO__;
+                    controlCal.ds_programamodificacion = Users.PROGRAMA_;
+                    dControl.Actualizar(controlCal);
                     MessageBox.Show("registro actualizado");
                 }
                 esNuevoRegistro = false;
@@ -127,8 +115,8 @@ namespace CalidadCoolecheraForms
 
                 if (bs.Current != null)
                 {
-                    var calidadCDA = (CalidadCDA)bs.Current;
-                    if (calidadCDA.cd_codigocda == 0)
+                    var controlCal = (ControlCalidad)bs.Current;
+                    if (controlCal.ds_periodoliquidacion.Equals("0"))
                     {
                         bs.RemoveCurrent();
                     }
@@ -154,12 +142,12 @@ namespace CalidadCoolecheraForms
         {
             if (bs.Current == null)
             {
-                MessageBox.Show("Registro no existe");
+                MessageBox.Show("Periodo no existe");
             }
             else
             {
-                var calidadCDA = (CalidadCDA)bs.Current;
-                dCalidadCda.Borrar(calidadCDA);
+                var controlCal = (ControlCalidad)bs.Current;
+                dControl.Borrar(controlCal);
                 bs.RemoveCurrent();
             }
 

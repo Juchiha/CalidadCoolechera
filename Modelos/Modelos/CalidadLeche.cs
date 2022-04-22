@@ -12,8 +12,8 @@ namespace CalidadModelos.Modelos
 		public int am_numeroliquidacion { get; set; }
 		public string cd_codigofinca { get; set; }
 		public string cd_codigoconsignante { get; set; }
-		public string dt_fechamuestra { get; set; }
-		public string am_valordensidad { get; set; }
+		public DateTime dt_fechamuestra { get; set; }
+		public int am_valordensidad { get; set; }
 		public int am_promediodensidad { get; set; }
 		public int am_valorsolidostotales { get; set; }
 		public int am_promediosolidostotales { get; set; }
@@ -33,11 +33,11 @@ namespace CalidadModelos.Modelos
 		public int am_valorlitro { get; set; }
 		public string ds_usuariocreacion { get; set; }
 		public string ds_equipocreacion { get; set; }
-		public string dt_fechacreacion { get; set; }
+		public DateTime dt_fechacreacion { get; set; }
 		public string ds_programacreacion { get; set; }
 		public string ds_usuariomodificacion { get; set; }
 		public string ds_equipomodificacion { get; set; }
-		public string dt_fechamodificacion { get; set; }
+		public DateTime dt_fechamodificacion { get; set; }
 		public string ds_programamodificacion { get; set; }
 
         public CalidadLeche()
@@ -45,7 +45,7 @@ namespace CalidadModelos.Modelos
 
         }
 
-        public CalidadLeche(string ds_periodoliquidacion, int am_numeroliquidacion, string cd_codigofinca, string cd_codigoconsignante, string dt_fechamuestra, string am_valordensidad, int am_promediodensidad, int am_valorsolidostotales, int am_promediosolidostotales, int am_bonificacionsolidostotales, int am_valorgrasa, int am_promediograsa, int am_bonificaciongrasa, int am_valorproteina, int am_promedioproteina, int am_bonificacionproteina, int am_valorunidadformadoracolonias, int am_promediounidadformadoracolonias, int am_bonificacionformadoracolonias, int am_bonificacionformadoracoloniasfria, int am_bonificacionvoluntariafria, int am_bonificacionvoluntariacalidad, int am_valorlitro, string ds_usuariocreacion, string ds_equipocreacion, string dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, string dt_fechamodificacion, string ds_programamodificacion)
+        public CalidadLeche(string ds_periodoliquidacion, int am_numeroliquidacion, string cd_codigofinca, string cd_codigoconsignante, DateTime dt_fechamuestra, int am_valordensidad, int am_promediodensidad, int am_valorsolidostotales, int am_promediosolidostotales, int am_bonificacionsolidostotales, int am_valorgrasa, int am_promediograsa, int am_bonificaciongrasa, int am_valorproteina, int am_promedioproteina, int am_bonificacionproteina, int am_valorunidadformadoracolonias, int am_promediounidadformadoracolonias, int am_bonificacionformadoracolonias, int am_bonificacionformadoracoloniasfria, int am_bonificacionvoluntariafria, int am_bonificacionvoluntariacalidad, int am_valorlitro, string ds_usuariocreacion, string ds_equipocreacion, DateTime dt_fechacreacion, string ds_programacreacion, string ds_usuariomodificacion, string ds_equipomodificacion, DateTime dt_fechamodificacion, string ds_programamodificacion)
         {
             this.ds_periodoliquidacion = ds_periodoliquidacion;
             this.am_numeroliquidacion = am_numeroliquidacion;

@@ -56,6 +56,18 @@ namespace CalidadCoolecheraForms
             frmControlVariables.ShowDialog();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var frmControlCalidad = new ControlCalidadForm();
+            frmControlCalidad.StartPosition = FormStartPosition.CenterParent;
+            frmControlCalidad.ShowDialog();
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var frmCalidadLeche = new NewCalidadLeche();
+            frmCalidadLeche.StartPosition = FormStartPosition.CenterParent;
+            frmCalidadLeche.ShowDialog();
+        }
     }
 }

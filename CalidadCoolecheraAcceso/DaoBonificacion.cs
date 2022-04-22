@@ -26,7 +26,7 @@ namespace CalidadCoolecheraAcceso
 
         public List<Bonificacion> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT * FROM calidad.bonificacion";
+            var Lsql = "SELECT am_rangoinferior, am_rangosuperior, am_pagobacterias, am_pagofrio FROM calidad.bonificacion";
             var bonificacion = pConexion.Conexion.Query<Bonificacion>(Lsql, transaction).ToList();
             return bonificacion;
         }
@@ -40,8 +40,8 @@ namespace CalidadCoolecheraAcceso
 
         public int Insertar(Bonificacion bonificacion, IDbTransaction transaction = null)
         {
-            var strSQl = @"INSERT INTO calidad.bonificacion(bo_codigo, am_rangoinferior, am_rangosuperior, am_pagobacterias, am_pagofrio, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion, ds_usuariomodificacion, ds_equipomodificacion, dt_fechamodificacion, ds_programamodificacion) 
-                           VALUES (@bo_codigo, @am_rangoinferior, @am_rangosuperior, @am_pagobacterias, @am_pagofrio, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion, @ds_usuariomodificacion, @ds_equipomodificacion, @dt_fechamodificacion, @ds_programamodificacion)  ";
+            var strSQl = @"INSERT INTO calidad.bonificacion(am_rangoinferior, am_rangosuperior, am_pagobacterias, am_pagofrio, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion, ds_usuariomodificacion, ds_equipomodificacion, dt_fechamodificacion, ds_programamodificacion) 
+                           VALUES (@am_rangoinferior, @am_rangosuperior, @am_pagobacterias, @am_pagofrio, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion, @ds_usuariomodificacion, @ds_equipomodificacion, @dt_fechamodificacion, @ds_programamodificacion)  ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, bonificacion, transaction);
             return nroFilasAfectadas;
         }

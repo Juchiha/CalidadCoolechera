@@ -29,3 +29,6 @@ C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\De
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.BonificacionForm.resources
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.CalidadCDAForm.resources
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ConfiguracionForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ControlCalidadForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.CalidadLecheForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.NewCalidadLeche.resources

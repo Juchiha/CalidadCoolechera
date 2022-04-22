@@ -41,8 +41,8 @@ namespace CalidadCoolecheraAcceso
 
         public int Insertar(ConfiguracionCalidad Calidad_Leche, IDbTransaction transaction = null)
         {
-            var strSQl = @"INSERT INTO calidad.configuracion_calidad(cd_codigovariable, ds_tipovariable, ds_valorvariable, ds_descripcionvariable, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion) 
-                           VALUES (@cd_codigovariable, @ds_tipovariable, @ds_valorvariable, @ds_descripcionvariable, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion)  ";
+            var strSQl = @"INSERT INTO calidad.configuracion_calidad(cd_codigovariable, ds_tipovariable, ds_valorvariable, ds_descripcionvariable, ds_usuariocreacion, ds_equipocreacion, dt_fechacreacion, ds_programacreacion, ds_usuariomodificacion, ds_equipomodificacion, dt_fechamodificacion, ds_programamodificacion ) 
+                           VALUES (@cd_codigovariable, @ds_tipovariable, @ds_valorvariable, @ds_descripcionvariable, @ds_usuariocreacion, @ds_equipocreacion, @dt_fechacreacion, @ds_programacreacion, @ds_usuariomodificacion, @ds_equipomodificacion, @dt_fechamodificacion, @ds_programamodificacion)  ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, Calidad_Leche, transaction);
             return nroFilasAfectadas;
         }

@@ -27,7 +27,7 @@ namespace CalidadCoolecheraAcceso
 
         public List<CalidadCDA> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT * FROM calidad.calidad_cda";
+            var Lsql = "SELECT cd_codigocda, ds_periodoliquidacion, am_numeroliquidacion, am_valorsolidostotales, am_valorunidadformadoracolonias FROM calidad.calidad_cda";
             var calidad_cda = pConexion.Conexion.Query<CalidadCDA>(Lsql, transaction).ToList();
             return calidad_cda;
         }
