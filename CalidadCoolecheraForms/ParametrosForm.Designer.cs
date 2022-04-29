@@ -35,6 +35,8 @@
             this.btnGuardarInfo = new System.Windows.Forms.Button();
             this.btnNuevoRegistro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEstadoAsociado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtEstadoPeriodoCda = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumeroPeriodo = new System.Windows.Forms.TextBox();
@@ -42,8 +44,6 @@
             this.txtPeriodoLiquidacion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.txtEstadoAsociado = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -58,10 +58,10 @@
             this.groupBox1.Controls.Add(this.btnNuevoRegistro);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.dgv);
-            this.groupBox1.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 482);
+            this.groupBox1.Size = new System.Drawing.Size(776, 441);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Periodos";
@@ -78,7 +78,7 @@
             // 
             // btnBorrarInfo
             // 
-            this.btnBorrarInfo.Location = new System.Drawing.Point(515, 445);
+            this.btnBorrarInfo.Location = new System.Drawing.Point(515, 402);
             this.btnBorrarInfo.Name = "btnBorrarInfo";
             this.btnBorrarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnBorrarInfo.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             // btnGuardarInfo
             // 
-            this.btnGuardarInfo.Location = new System.Drawing.Point(515, 408);
+            this.btnGuardarInfo.Location = new System.Drawing.Point(515, 365);
             this.btnGuardarInfo.Name = "btnGuardarInfo";
             this.btnGuardarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnGuardarInfo.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             // btnNuevoRegistro
             // 
-            this.btnNuevoRegistro.Location = new System.Drawing.Point(515, 371);
+            this.btnNuevoRegistro.Location = new System.Drawing.Point(515, 328);
             this.btnNuevoRegistro.Name = "btnNuevoRegistro";
             this.btnNuevoRegistro.Size = new System.Drawing.Size(255, 31);
             this.btnNuevoRegistro.TabIndex = 2;
@@ -118,49 +118,65 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(515, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 269);
+            this.groupBox2.Size = new System.Drawing.Size(255, 226);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // txtEstadoAsociado
+            // 
+            this.txtEstadoAsociado.Location = new System.Drawing.Point(6, 188);
+            this.txtEstadoAsociado.Name = "txtEstadoAsociado";
+            this.txtEstadoAsociado.Size = new System.Drawing.Size(243, 23);
+            this.txtEstadoAsociado.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Estado Periodo Asociado";
+            // 
             // txtEstadoPeriodoCda
             // 
-            this.txtEstadoPeriodoCda.Location = new System.Drawing.Point(6, 163);
+            this.txtEstadoPeriodoCda.Location = new System.Drawing.Point(6, 140);
             this.txtEstadoPeriodoCda.Name = "txtEstadoPeriodoCda";
-            this.txtEstadoPeriodoCda.Size = new System.Drawing.Size(243, 29);
+            this.txtEstadoPeriodoCda.Size = new System.Drawing.Size(243, 23);
             this.txtEstadoPeriodoCda.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Location = new System.Drawing.Point(6, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 22);
+            this.label3.Size = new System.Drawing.Size(113, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Estado Periodo CDA";
             // 
             // txtNumeroPeriodo
             // 
-            this.txtNumeroPeriodo.Location = new System.Drawing.Point(6, 106);
+            this.txtNumeroPeriodo.Location = new System.Drawing.Point(6, 92);
             this.txtNumeroPeriodo.Name = "txtNumeroPeriodo";
-            this.txtNumeroPeriodo.Size = new System.Drawing.Size(243, 29);
+            this.txtNumeroPeriodo.Size = new System.Drawing.Size(243, 23);
             this.txtNumeroPeriodo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 81);
+            this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 22);
+            this.label2.Size = new System.Drawing.Size(132, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Numero de Liquidación";
             // 
             // txtPeriodoLiquidacion
             // 
-            this.txtPeriodoLiquidacion.Location = new System.Drawing.Point(6, 49);
+            this.txtPeriodoLiquidacion.Location = new System.Drawing.Point(6, 44);
             this.txtPeriodoLiquidacion.Name = "txtPeriodoLiquidacion";
-            this.txtPeriodoLiquidacion.Size = new System.Drawing.Size(243, 29);
+            this.txtPeriodoLiquidacion.Size = new System.Drawing.Size(243, 23);
             this.txtPeriodoLiquidacion.TabIndex = 1;
             // 
             // label1
@@ -168,7 +184,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 22);
+            this.label1.Size = new System.Drawing.Size(113, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Periodo Liquidación";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -179,33 +195,17 @@
             this.dgv.Location = new System.Drawing.Point(6, 28);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(503, 448);
+            this.dgv.Size = new System.Drawing.Size(503, 405);
             this.dgv.TabIndex = 0;
-            // 
-            // txtEstadoAsociado
-            // 
-            this.txtEstadoAsociado.Location = new System.Drawing.Point(6, 219);
-            this.txtEstadoAsociado.Name = "txtEstadoAsociado";
-            this.txtEstadoAsociado.Size = new System.Drawing.Size(243, 29);
-            this.txtEstadoAsociado.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 194);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 22);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Estado Periodo Asociado";
             // 
             // ParametrosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 506);
+            this.ClientSize = new System.Drawing.Size(800, 460);
             this.Controls.Add(this.groupBox1);
             this.Name = "ParametrosForm";
-            this.Text = "ParametrosForm";
+            this.Text = "Configuración de Periodos";
             this.Load += new System.EventHandler(this.ParametrosForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

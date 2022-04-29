@@ -34,7 +34,7 @@ namespace CalidadCoolecheraAcceso
 
         public List<Finca> buscar(string codconsignante, IDbTransaction transaction = null)
         {
-            var strSQl = "SELECT * FROM calidad.mtfinca where codconsignante = @codconsignante ";
+            var strSQl = "SELECT f.codfinca, f.nombre, f.codruta, p.nombre as codplanta  FROM calidad.mtfinca f JOIN mtplanta p ON p.codplanta = f.codplanta where codconsignante = @codconsignante ";
             var Calidad_Leche = pConexion.Conexion.Query<Finca>(strSQl, new { codconsignante = codconsignante }, transaction).ToList();
             return Calidad_Leche;
         }

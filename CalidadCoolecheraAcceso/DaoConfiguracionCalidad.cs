@@ -35,7 +35,7 @@ namespace CalidadCoolecheraAcceso
         public ConfiguracionCalidad buscar(string ds_codigo, IDbTransaction transaction = null)
         {
             var strSQl = "select * from calidad.configuracion_calidad where cd_codigovariable = @cd_codigovariable";
-            var Calidad_Leche = pConexion.Conexion.QueryFirst<ConfiguracionCalidad>(strSQl, new { ds_codigo = ds_codigo }, transaction);
+            var Calidad_Leche = pConexion.Conexion.QueryFirst<ConfiguracionCalidad>(strSQl, new { cd_codigovariable = ds_codigo }, transaction);
             return Calidad_Leche;
         }
 

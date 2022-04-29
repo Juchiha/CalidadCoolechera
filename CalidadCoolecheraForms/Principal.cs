@@ -44,7 +44,7 @@ namespace CalidadCoolecheraForms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var frmCalidadCDA = new CalidadCDAForm();
+            var frmCalidadCDA = new newCalidadCDA();
             frmCalidadCDA.StartPosition = FormStartPosition.CenterParent;
             frmCalidadCDA.ShowDialog();
         }

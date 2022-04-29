@@ -28,14 +28,14 @@ namespace CalidadCoolecheraAcceso
 
         public List<Periodo> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT ds_periodoliquidacion, am_numeroliquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos";
+            var Lsql = "SELECT ds_periodoliquidacion, am_numeroliquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos ORDER BY ds_periodoliquidacion ASC,am_numeroliquidacion ASC ";
             var periodos = pConexion.Conexion.Query<Periodo>(Lsql, transaction).ToList();
             return periodos;
         }
 
         public List<ComboPeriodo> ListarParaCombox(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT ds_periodoliquidacion as Id, CONCAT(ds_periodoliquidacion, '-', am_numeroliquidacion) as Nombre, am_numeroliquidacion as Liquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos";
+            var Lsql = "SELECT ds_periodoliquidacion as Id, CONCAT(ds_periodoliquidacion, '-', am_numeroliquidacion) as Nombre, am_numeroliquidacion as Liquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos ORDER BY ds_periodoliquidacion ASC,am_numeroliquidacion ASC ";
             var ComboPeriodo = pConexion.Conexion.Query<ComboPeriodo>(Lsql, transaction).ToList();
             return ComboPeriodo;
         }
@@ -65,7 +65,7 @@ namespace CalidadCoolecheraAcceso
         public int Actualizar(Periodo periodo, IDbTransaction transaction = null)
         {
             var strSQl = @"UPDATE calidad.periodos SET am_numeroliquidacion = @am_numeroliquidacion,  ds_estadoperiodocda = @ds_estadoperiodocda, ds_estadoperiodoasociado = @ds_estadoperiodoasociado, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion  
-                           WHERE ds_periodoliquidacion = @ds_periodoliquidacion";
+                           WHERE ds_periodoliquidacion = @ds_periodoliquidacion and  am_numeroliquidacion = @am_numeroliquidacion ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, periodo, transaction);
             return nroFilasAfectadas;
         }

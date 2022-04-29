@@ -58,10 +58,10 @@
             this.groupBox1.Controls.Add(this.btnNuevoRegistro);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.dgv);
-            this.groupBox1.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 482);
+            this.groupBox1.Size = new System.Drawing.Size(776, 437);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuaración Variables";
@@ -78,7 +78,7 @@
             // 
             // btnBorrarInfo
             // 
-            this.btnBorrarInfo.Location = new System.Drawing.Point(515, 445);
+            this.btnBorrarInfo.Location = new System.Drawing.Point(515, 400);
             this.btnBorrarInfo.Name = "btnBorrarInfo";
             this.btnBorrarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnBorrarInfo.TabIndex = 4;
@@ -88,7 +88,7 @@
             // 
             // btnGuardarInfo
             // 
-            this.btnGuardarInfo.Location = new System.Drawing.Point(515, 408);
+            this.btnGuardarInfo.Location = new System.Drawing.Point(515, 363);
             this.btnGuardarInfo.Name = "btnGuardarInfo";
             this.btnGuardarInfo.Size = new System.Drawing.Size(255, 31);
             this.btnGuardarInfo.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             // btnNuevoRegistro
             // 
-            this.btnNuevoRegistro.Location = new System.Drawing.Point(515, 371);
+            this.btnNuevoRegistro.Location = new System.Drawing.Point(515, 326);
             this.btnNuevoRegistro.Name = "btnNuevoRegistro";
             this.btnNuevoRegistro.Size = new System.Drawing.Size(255, 31);
             this.btnNuevoRegistro.TabIndex = 2;
@@ -118,64 +118,64 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(515, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 269);
+            this.groupBox2.Size = new System.Drawing.Size(255, 224);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
             // txtDescripcionVariable
             // 
-            this.txtDescripcionVariable.Location = new System.Drawing.Point(6, 220);
+            this.txtDescripcionVariable.Location = new System.Drawing.Point(6, 188);
             this.txtDescripcionVariable.Name = "txtDescripcionVariable";
-            this.txtDescripcionVariable.Size = new System.Drawing.Size(243, 29);
+            this.txtDescripcionVariable.Size = new System.Drawing.Size(243, 23);
             this.txtDescripcionVariable.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 195);
+            this.label4.Location = new System.Drawing.Point(6, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 22);
+            this.label4.Size = new System.Drawing.Size(115, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Descripción Variable";
             // 
             // txtValorVariable
             // 
-            this.txtValorVariable.Location = new System.Drawing.Point(6, 163);
+            this.txtValorVariable.Location = new System.Drawing.Point(6, 140);
             this.txtValorVariable.Name = "txtValorVariable";
-            this.txtValorVariable.Size = new System.Drawing.Size(243, 29);
+            this.txtValorVariable.Size = new System.Drawing.Size(243, 23);
             this.txtValorVariable.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Location = new System.Drawing.Point(6, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 22);
+            this.label3.Size = new System.Drawing.Size(79, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Valor Variable";
             // 
             // txtTipoVariable
             // 
-            this.txtTipoVariable.Location = new System.Drawing.Point(6, 106);
+            this.txtTipoVariable.Location = new System.Drawing.Point(6, 92);
             this.txtTipoVariable.Name = "txtTipoVariable";
-            this.txtTipoVariable.Size = new System.Drawing.Size(243, 29);
+            this.txtTipoVariable.Size = new System.Drawing.Size(243, 23);
             this.txtTipoVariable.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 81);
+            this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.Size = new System.Drawing.Size(76, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tipo Variable";
             // 
             // txtCodigoVariable
             // 
-            this.txtCodigoVariable.Location = new System.Drawing.Point(6, 49);
+            this.txtCodigoVariable.Location = new System.Drawing.Point(6, 44);
             this.txtCodigoVariable.Name = "txtCodigoVariable";
-            this.txtCodigoVariable.Size = new System.Drawing.Size(243, 29);
+            this.txtCodigoVariable.Size = new System.Drawing.Size(243, 23);
             this.txtCodigoVariable.TabIndex = 1;
             // 
             // label1
@@ -183,7 +183,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 22);
+            this.label1.Size = new System.Drawing.Size(90, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo Variable";
             // 
@@ -193,17 +193,17 @@
             this.dgv.Location = new System.Drawing.Point(6, 28);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(503, 448);
+            this.dgv.Size = new System.Drawing.Size(503, 403);
             this.dgv.TabIndex = 0;
             // 
             // ConfiguracionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 504);
+            this.ClientSize = new System.Drawing.Size(800, 459);
             this.Controls.Add(this.groupBox1);
             this.Name = "ConfiguracionForm";
-            this.Text = "ConfiguracionForm";
+            this.Text = "Configuracion de Variables";
             this.Load += new System.EventHandler(this.ConfiguracionForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

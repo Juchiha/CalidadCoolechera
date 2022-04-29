@@ -35,6 +35,8 @@
             this.btnGuardarInfo = new System.Windows.Forms.Button();
             this.btnNuevoRegistro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtValorFrio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtPagoFrio = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPagoBacterias = new System.Windows.Forms.TextBox();
@@ -58,7 +60,7 @@
             this.groupBox1.Controls.Add(this.btnNuevoRegistro);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.dgv);
-            this.groupBox1.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 482);
@@ -108,6 +110,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtValorFrio);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txtPagoFrio);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtPagoBacterias);
@@ -123,59 +127,77 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
             // 
+            // txtValorFrio
+            // 
+            this.txtValorFrio.Location = new System.Drawing.Point(6, 211);
+            this.txtValorFrio.Name = "txtValorFrio";
+            this.txtValorFrio.Size = new System.Drawing.Size(243, 23);
+            this.txtValorFrio.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 193);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 15);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Pago Voluntario Frio";
+            // 
             // txtPagoFrio
             // 
-            this.txtPagoFrio.Location = new System.Drawing.Point(6, 220);
+            this.txtPagoFrio.Location = new System.Drawing.Point(6, 169);
             this.txtPagoFrio.Name = "txtPagoFrio";
-            this.txtPagoFrio.Size = new System.Drawing.Size(243, 29);
+            this.txtPagoFrio.Size = new System.Drawing.Size(243, 23);
             this.txtPagoFrio.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 195);
+            this.label4.Location = new System.Drawing.Point(6, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 22);
+            this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Pago Frio";
             // 
             // txtPagoBacterias
             // 
-            this.txtPagoBacterias.Location = new System.Drawing.Point(6, 163);
+            this.txtPagoBacterias.Location = new System.Drawing.Point(6, 126);
             this.txtPagoBacterias.Name = "txtPagoBacterias";
-            this.txtPagoBacterias.Size = new System.Drawing.Size(243, 29);
+            this.txtPagoBacterias.Size = new System.Drawing.Size(243, 23);
             this.txtPagoBacterias.TabIndex = 5;
+            this.txtPagoBacterias.TextChanged += new System.EventHandler(this.txtPagoBacterias_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Location = new System.Drawing.Point(6, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 22);
+            this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Pago Bacterias";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtRangoSuperior
             // 
-            this.txtRangoSuperior.Location = new System.Drawing.Point(6, 106);
+            this.txtRangoSuperior.Location = new System.Drawing.Point(6, 84);
             this.txtRangoSuperior.Name = "txtRangoSuperior";
-            this.txtRangoSuperior.Size = new System.Drawing.Size(243, 29);
+            this.txtRangoSuperior.Size = new System.Drawing.Size(243, 23);
             this.txtRangoSuperior.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 81);
+            this.label2.Location = new System.Drawing.Point(6, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 22);
+            this.label2.Size = new System.Drawing.Size(89, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Rango Superior";
             // 
             // txtRangoInferior
             // 
-            this.txtRangoInferior.Location = new System.Drawing.Point(6, 49);
+            this.txtRangoInferior.Location = new System.Drawing.Point(6, 42);
             this.txtRangoInferior.Name = "txtRangoInferior";
-            this.txtRangoInferior.Size = new System.Drawing.Size(243, 29);
+            this.txtRangoInferior.Size = new System.Drawing.Size(243, 23);
             this.txtRangoInferior.TabIndex = 1;
             // 
             // label1
@@ -183,7 +205,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 22);
+            this.label1.Size = new System.Drawing.Size(83, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rango Inferior";
             // 
@@ -203,7 +225,7 @@
             this.ClientSize = new System.Drawing.Size(800, 507);
             this.Controls.Add(this.groupBox1);
             this.Name = "BonificacionForm";
-            this.Text = "Bonificacion";
+            this.Text = "Bonificaciones";
             this.Load += new System.EventHandler(this.Bonificacion_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -231,5 +253,7 @@
         private System.Windows.Forms.TextBox txtRangoInferior;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.TextBox txtValorFrio;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -27,8 +27,9 @@ C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\De
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\bin\Debug\net5.0-windows\CalidadCoolecheraModelos.pdb
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.csproj.CopyComplete
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.BonificacionForm.resources
-C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.CalidadCDAForm.resources
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ConfiguracionForm.resources
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ControlCalidadForm.resources
-C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.CalidadLecheForm.resources
 C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.NewCalidadLeche.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.FincasFormAux.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.ConsignantesAuxForm.resources
+C:\Users\Jose Giron\source\repos\CalidadCoolechera\CalidadCoolecheraForms\obj\Debug\net5.0-windows\CalidadCoolecheraForms.newCalidadCDA.resources

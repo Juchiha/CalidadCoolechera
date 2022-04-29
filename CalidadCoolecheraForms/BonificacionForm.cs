@@ -43,6 +43,7 @@ namespace CalidadCoolecheraForms
             DataGridViewColumn column9 = dgv.Columns[9];
             DataGridViewColumn column10 = dgv.Columns[10];
             DataGridViewColumn column11 = dgv.Columns[11];
+            DataGridViewColumn column12 = dgv.Columns[12];
             column4.Visible = false;
             column5.Visible = false;
             column6.Visible = false;
@@ -59,14 +60,18 @@ namespace CalidadCoolecheraForms
             column1.HeaderText = "Rango Superior";
             column2.HeaderText = "Pago Bacterias";
             column3.HeaderText = "Pago Frio";
+            column12.HeaderText = "Pago Frio Voluntario";
+
             column0.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column12.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             txtRangoInferior.DataBindings.Add("Text", bs, "am_rangoinferior");
             txtRangoSuperior.DataBindings.Add("Text", bs, "am_rangosuperior");
             txtPagoBacterias.DataBindings.Add("Text", bs, "am_pagobacterias");
             txtPagoFrio.DataBindings.Add("Text", bs, "am_pagofrio");
+            txtValorFrio.DataBindings.Add("Text", bs, "am_valorfriovoluntario");
             dgv.AllowUserToAddRows = false;
         }
 
@@ -184,6 +189,16 @@ namespace CalidadCoolecheraForms
             {
                 MessageBox.Show("Error no controlado " + ex.Message);
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPagoBacterias_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

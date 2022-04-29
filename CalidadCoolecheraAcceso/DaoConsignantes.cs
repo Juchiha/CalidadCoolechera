@@ -32,10 +32,17 @@ namespace CalidadCoolecheraAcceso
             return calidad_cda;
         }
 
+        public List<Consignante> Listar( string filtro, IDbTransaction transaction = null)
+        {
+            var Lsql = "SELECT * FROM calidad.mtconsignante WHERE (codconsignante LIKE '%"+filtro+"%') OR (nombre  LIKE '%" + filtro + "%') ";
+            var calidad_cda = pConexion.Conexion.Query<Consignante>(Lsql, transaction).ToList();
+            return calidad_cda;
+        }
+
         public Consignante buscar(string codconsignante, IDbTransaction transaction = null)
         {
             var strSQl = "SELECT * FROM calidad.mtconsignante where codconsignante = @codconsignante ";
-            var Calidad_Leche = pConexion.Conexion.QueryFirst<Consignante>(strSQl, new { codconsignante = codconsignante }, transaction);
+            var Calidad_Leche = pConexion.Conexion.QueryFirstOrDefault<Consignante>(strSQl, new { codconsignante = codconsignante }, transaction);
             return Calidad_Leche;
         }
     }

@@ -4,16 +4,19 @@
     <Compile Update="BonificacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CalidadCDAForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="CalidadLecheForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="ConfiguracionForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ConsignantesAuxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ControlCalidadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FincasFormAux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NewCalidadCDA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NewCalidadLeche.cs">
