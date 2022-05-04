@@ -20,7 +20,7 @@ namespace CalidadCoolecheraForms
         private BindingSource bs = new BindingSource();
         public string codigoConsignante;
         public string codigoFincaSeleccionada;
-
+        public string nombreFincaSeleccionada;
         public FincasFormAux()
         {
             InitializeComponent();
@@ -77,6 +77,7 @@ namespace CalidadCoolecheraForms
         {
             //MessageBox.Show(dataGridFincas.Rows[e.RowIndex].Cells[0].Value.ToString());
             this.codigoFincaSeleccionada = dataGridFincas.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.nombreFincaSeleccionada = dataGridFincas.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.Close();
         }
     }

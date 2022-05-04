@@ -52,6 +52,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnBorrarInfo);
             this.groupBox1.Controls.Add(this.btnGuardarInfo);
@@ -68,6 +71,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(515, 28);
             this.pictureBox1.Name = "pictureBox1";
@@ -78,6 +82,7 @@
             // 
             // btnBorrarInfo
             // 
+            this.btnBorrarInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBorrarInfo.Location = new System.Drawing.Point(515, 402);
             this.btnBorrarInfo.Name = "btnBorrarInfo";
             this.btnBorrarInfo.Size = new System.Drawing.Size(255, 31);
@@ -88,6 +93,7 @@
             // 
             // btnGuardarInfo
             // 
+            this.btnGuardarInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardarInfo.Location = new System.Drawing.Point(515, 365);
             this.btnGuardarInfo.Name = "btnGuardarInfo";
             this.btnGuardarInfo.Size = new System.Drawing.Size(255, 31);
@@ -98,6 +104,7 @@
             // 
             // btnNuevoRegistro
             // 
+            this.btnNuevoRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNuevoRegistro.Location = new System.Drawing.Point(515, 328);
             this.btnNuevoRegistro.Name = "btnNuevoRegistro";
             this.btnNuevoRegistro.Size = new System.Drawing.Size(255, 31);
@@ -108,6 +115,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txtEstadoAsociado);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtEstadoPeriodoCda);
@@ -191,8 +199,13 @@
             // 
             // dgv
             // 
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Location = new System.Drawing.Point(6, 28);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 25;
             this.dgv.Size = new System.Drawing.Size(503, 405);
@@ -202,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(798, 460);
             this.Controls.Add(this.groupBox1);
             this.Name = "ParametrosForm";
             this.Text = "Configuración de Periodos";

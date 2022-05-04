@@ -49,7 +49,7 @@ namespace CalidadCoolecheraAcceso
 
         public int Actualizar(ConfiguracionCalidad Calidad_Leche, IDbTransaction transaction = null)
         {
-            var strSQl = @"UPDATE calidad.configuracion_calidad SET cd_codigovariable = @cd_codigovariable, ds_tipovariable = @ds_tipovariable, ds_valorvariable = @ds_valorvariable, ds_descripcionvariable = @ds_descripcionvariable, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion
+            var strSQl = @"UPDATE calidad.configuracion_calidad SET ds_tipovariable = @ds_tipovariable, ds_valorvariable = @ds_valorvariable, ds_descripcionvariable = @ds_descripcionvariable, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion
                            WHERE cd_codigovariable= @cd_codigovariable";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, Calidad_Leche, transaction);
             return nroFilasAfectadas;

@@ -22,7 +22,7 @@ namespace CalidadCoolecheraForms
         private DaoConfiguracionCalidad dControlCal;
         private DaoBonificacion dBonificacion;
         private BindingSource bs = new BindingSource();
-        private bool esNuevoRegistro = false;
+ 
 
         public NewCalidadLeche()
         {
@@ -110,6 +110,7 @@ namespace CalidadCoolecheraForms
 
             column4.ReadOnly = true;
             column2.ReadOnly = true;
+            column3.ReadOnly = true;
             column4.Width = 100;
 
 
@@ -137,7 +138,7 @@ namespace CalidadCoolecheraForms
 
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 1 || e.ColumnIndex == 3 || e.ColumnIndex == 5 || e.ColumnIndex == 6) // 1 should be your column index
+            if (e.ColumnIndex == 1 || e.ColumnIndex == 5 || e.ColumnIndex == 6) // 1 should be your column index
             {
                 double i;
                 if (!Double.TryParse(Convert.ToString(e.FormattedValue), out i))
@@ -154,17 +155,19 @@ namespace CalidadCoolecheraForms
             {
                 string codigo = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 Consignante cons = dConsignantes.buscar(codigo);
-                if(cons != null)
+                if (cons != null)
                 {
-                    if(cons.estado.Equals("X"))
+                    if (cons.estado.Equals("X"))
                     {
-                        MessageBox.Show("Productor Inactivo, por favor verifique NOMBRE: "+ cons.nombre+" MOTIVO: "+cons.comentario);
+                        dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
+                        dataGridView1.Rows[e.RowIndex].Cells[2].Value = null;
+                        MessageBox.Show("Productor Inactivo, por favor verifique \n NOMBRE: " + cons.nombre + " \n MOTIVO: " + cons.comentario);
                     }
                     else
                     {
                         dataGridView1.Rows[e.RowIndex].Cells[2].Value = cons.nombre;
                     }
-                    
+
                 }
                 else
                 {
@@ -173,13 +176,15 @@ namespace CalidadCoolecheraForms
                     dataGridView1.Rows[e.RowIndex].Cells[1].Value = frmAuxConsignantes.codigoConsignanteSeleccionado;
                     dataGridView1.Rows[e.RowIndex].Cells[2].Value = frmAuxConsignantes.nombreConsignanteSeleccionado;
                 }
-                
-
             }else if(e.ColumnIndex == 3)
             {
-                string codigoFinca = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                string codigoConsignante = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                getPromediosParaText(codigoConsignante, codigoFinca);
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    string codigoFinca = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    string codigoConsignante = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    getPromediosParaText(codigoConsignante, codigoFinca);
+                }
+                
 
             }
         }
@@ -374,11 +379,20 @@ namespace CalidadCoolecheraForms
         {
             if (e.ColumnIndex == 3)
             {
-                string codigoConsignante = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                var frmFincas = new FincasFormAux();
-                frmFincas.codigoConsignante = codigoConsignante;
-                frmFincas.ShowDialog();
-                dataGridView1.Rows[e.RowIndex].Cells[3].Value = frmFincas.codigoFincaSeleccionada;
+                if (dataGridView1.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    string codigoConsignante = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    var frmFincas = new FincasFormAux();
+                    frmFincas.codigoConsignante = codigoConsignante;
+                    frmFincas.ShowDialog();
+                    dataGridView1.Rows[e.RowIndex].Cells[3].Value = frmFincas.codigoFincaSeleccionada;
+                    dataGridView1.Rows[e.RowIndex].Cells[4].Value = frmFincas.nombreFincaSeleccionada;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor digite el codigo del Consignante");
+                }
+               
             }
         }
 
@@ -494,6 +508,32 @@ namespace CalidadCoolecheraForms
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+                SendKeys.Send("{tab}");
+            }
+        }
+
+        private void dataGridView1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView1_KeyUp(object sender, KeyEventArgs e)
+        {
+           
         }
     }
 }

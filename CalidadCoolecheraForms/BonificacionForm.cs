@@ -77,9 +77,16 @@ namespace CalidadCoolecheraForms
 
         private void btnNuevoRegistro_Click(object sender, EventArgs e)
         {
-            bs.EndEdit();
-            bs.AddNew();
-            esNuevoRegistro = true;
+            if (esNuevoRegistro == false)
+            {
+                bs.EndEdit();
+                bs.AddNew();
+                esNuevoRegistro = true;
+            }
+            else
+            {
+                MessageBox.Show("Ya se esta creando un nuevo registro");
+            }
         }
 
         private void Guardar()
@@ -181,13 +188,19 @@ namespace CalidadCoolecheraForms
 
         private void btnBorrarInfo_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult dr = MessageBox.Show("Esta seguro de esta acción", "Confirmación de borrado", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Information);
+
+            if (dr == DialogResult.Yes)
             {
-                Borrar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error no controlado " + ex.Message);
+                try
+                {
+                    Borrar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error no controlado " + ex.Message);
+                }
             }
         }
 

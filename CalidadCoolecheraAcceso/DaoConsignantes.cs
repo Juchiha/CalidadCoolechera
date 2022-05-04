@@ -27,7 +27,7 @@ namespace CalidadCoolecheraAcceso
 
         public List<Consignante> Listar(IDbTransaction transaction = null)
         {
-            var Lsql = "SELECT * FROM calidad.mtconsignante";
+            var Lsql = "SELECT * FROM calidad.mtconsignante WHERE estado not IN ('X', 'R')";
             var calidad_cda = pConexion.Conexion.Query<Consignante>(Lsql, transaction).ToList();
             return calidad_cda;
         }

@@ -64,7 +64,7 @@ namespace CalidadCoolecheraAcceso
 
         public int Actualizar(Periodo periodo, IDbTransaction transaction = null)
         {
-            var strSQl = @"UPDATE calidad.periodos SET am_numeroliquidacion = @am_numeroliquidacion,  ds_estadoperiodocda = @ds_estadoperiodocda, ds_estadoperiodoasociado = @ds_estadoperiodoasociado, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion  
+            var strSQl = @"UPDATE calidad.periodos SET ds_estadoperiodocda = @ds_estadoperiodocda, ds_estadoperiodoasociado = @ds_estadoperiodoasociado, ds_usuariomodificacion = @ds_usuariomodificacion, ds_equipomodificacion = @ds_equipomodificacion, dt_fechamodificacion = @dt_fechamodificacion, ds_programamodificacion = @ds_programamodificacion  
                            WHERE ds_periodoliquidacion = @ds_periodoliquidacion and  am_numeroliquidacion = @am_numeroliquidacion ";
             var nroFilasAfectadas = pConexion.Conexion.Execute(strSQl, periodo, transaction);
             return nroFilasAfectadas;

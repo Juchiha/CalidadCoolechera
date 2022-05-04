@@ -76,6 +76,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
@@ -91,24 +94,26 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1049, 492);
+            this.groupBox1.Size = new System.Drawing.Size(1049, 425);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CALIDAD DE LA LECHE";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(748, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(298, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(586, 50);
+            this.button3.Location = new System.Drawing.Point(557, 51);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 23);
             this.button3.TabIndex = 9;
@@ -118,7 +123,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(441, 51);
+            this.button2.Location = new System.Drawing.Point(412, 51);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 23);
             this.button2.TabIndex = 8;
@@ -128,7 +133,7 @@
             // 
             // btnGuardarDatos
             // 
-            this.btnGuardarDatos.Location = new System.Drawing.Point(296, 51);
+            this.btnGuardarDatos.Location = new System.Drawing.Point(267, 51);
             this.btnGuardarDatos.Name = "btnGuardarDatos";
             this.btnGuardarDatos.Size = new System.Drawing.Size(139, 23);
             this.btnGuardarDatos.TabIndex = 7;
@@ -138,6 +143,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.txtBonVol);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.txtBonFrio);
@@ -146,9 +152,9 @@
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.txtBonVolSol);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(751, 387);
+            this.groupBox5.Location = new System.Drawing.Point(751, 321);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(286, 100);
+            this.groupBox5.Size = new System.Drawing.Size(286, 95);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Bonificaciones";
@@ -223,6 +229,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.txtPromedioUfc);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.txtUfc3);
@@ -231,7 +238,7 @@
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.txtUfc1);
             this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Location = new System.Drawing.Point(751, 281);
+            this.groupBox4.Location = new System.Drawing.Point(751, 215);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(286, 100);
             this.groupBox4.TabIndex = 6;
@@ -308,6 +315,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txtPromedioSolidos);
             this.groupBox3.Controls.Add(this.txtSolidos3);
             this.groupBox3.Controls.Add(this.txtSolidos2);
@@ -316,7 +324,7 @@
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(751, 175);
+            this.groupBox3.Location = new System.Drawing.Point(751, 109);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(286, 100);
             this.groupBox3.TabIndex = 6;
@@ -393,11 +401,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 79);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(739, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(739, 337);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -406,6 +418,9 @@
             this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
+            this.dataGridView1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyUp);
             // 
             // label2
             // 
@@ -447,7 +462,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 511);
+            this.ClientSize = new System.Drawing.Size(1070, 445);
             this.Controls.Add(this.groupBox1);
             this.Name = "NewCalidadLeche";
             this.Text = "Calidade La Leche";

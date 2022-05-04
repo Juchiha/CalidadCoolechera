@@ -53,6 +53,7 @@ namespace CalidadCoolecheraForms
             column3.Visible = false;
             column4.Visible = false;
             column6.Visible = false;
+            column5.Visible = false;
 
             column0.HeaderText = "Codigo";
             column1.HeaderText = "Nombre";
@@ -94,6 +95,11 @@ namespace CalidadCoolecheraForms
                 bs.DataSource = daoConsignante.Listar(txtbusqueda.Text.ToUpper());
                 enlazarControles();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

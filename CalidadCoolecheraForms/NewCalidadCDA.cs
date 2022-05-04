@@ -411,5 +411,13 @@ namespace CalidadCoolecheraForms
             return (Math.Truncate(value * aux_value) / aux_value);
         }
 
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
     }
 }
