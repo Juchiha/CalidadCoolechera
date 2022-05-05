@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CalidadModelos.Modelos;
 using Dapper;
 using System.Data;
+using CalidadCoolecheraModelos.Modelos;
 
 namespace CalidadCoolecheraAcceso
 {
@@ -31,6 +32,14 @@ namespace CalidadCoolecheraAcceso
             var calidad_cda = pConexion.Conexion.Query<ConfiguracionCalidad>(Lsql, transaction).ToList();
             return calidad_cda;
         }
+
+        public List<DataGridConcfiguracion> ListarVariables(IDbTransaction transaction = null)
+        {
+            var Lsql = "SELECT cd_codigovariable, ds_tipovariable, ds_valorvariable, ds_descripcionvariable FROM calidad.configuracion_calidad";
+            var calidad_cda = pConexion.Conexion.Query<DataGridConcfiguracion>(Lsql, transaction).ToList();
+            return calidad_cda;
+        }
+        
 
         public ConfiguracionCalidad buscar(string ds_codigo, IDbTransaction transaction = null)
         {

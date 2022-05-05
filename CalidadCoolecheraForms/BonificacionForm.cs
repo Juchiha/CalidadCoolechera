@@ -26,7 +26,7 @@ namespace CalidadCoolecheraForms
         {
             var cadenaconexion = Properties.Settings.Default.Properties["cadenaconexion"].DefaultValue.ToString();
             dBonificacion = new DaoBonificacion(cadenaconexion);
-            bs.DataSource = dBonificacion.Listar();
+            bs.DataSource = dBonificacion.ListarBonificaciones();
             enlazarControles();
         }
 
@@ -35,38 +35,23 @@ namespace CalidadCoolecheraForms
             dgv.DataSource = bs;
             dgv.AutoGenerateColumns = false;
             
-            DataGridViewColumn column4 = dgv.Columns[4];
-            DataGridViewColumn column5 = dgv.Columns[5];
-            DataGridViewColumn column6 = dgv.Columns[6];
-            DataGridViewColumn column7 = dgv.Columns[7];
-            DataGridViewColumn column8 = dgv.Columns[8];
-            DataGridViewColumn column9 = dgv.Columns[9];
-            DataGridViewColumn column10 = dgv.Columns[10];
-            DataGridViewColumn column11 = dgv.Columns[11];
-            DataGridViewColumn column12 = dgv.Columns[12];
-            column4.Visible = false;
-            column5.Visible = false;
-            column6.Visible = false;
-            column7.Visible = false;
-            column8.Visible = false;
-            column9.Visible = false;
-            column10.Visible = false;
-            column11.Visible = false;
             DataGridViewColumn column0 = dgv.Columns[0];
             DataGridViewColumn column1 = dgv.Columns[1];
             DataGridViewColumn column2 = dgv.Columns[2];
             DataGridViewColumn column3 = dgv.Columns[3];
+            DataGridViewColumn column4 = dgv.Columns[4];
             column0.HeaderText = "Rango Inferior";
             column1.HeaderText = "Rango Superior";
             column2.HeaderText = "Pago Bacterias";
             column3.HeaderText = "Pago Frio";
-            column12.HeaderText = "Pago Frio Voluntario";
+            column4.HeaderText = "Pago Frio Voluntario";
 
             column0.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            column12.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
             txtRangoInferior.DataBindings.Add("Text", bs, "am_rangoinferior");
             txtRangoSuperior.DataBindings.Add("Text", bs, "am_rangosuperior");
             txtPagoBacterias.DataBindings.Add("Text", bs, "am_pagobacterias");
@@ -212,6 +197,30 @@ namespace CalidadCoolecheraForms
         private void txtPagoBacterias_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                int iColumn = dgv.CurrentCell.ColumnIndex;
+                int iRow = dgv.CurrentCell.RowIndex;
+                if (iColumn == dgv.ColumnCount - 1)
+                {
+                    if (dgv.RowCount > (iRow + 1))
+                    {
+                        dgv.CurrentCell = dgv[0, iRow + 1];
+                    }
+                    else
+                    {
+                        //focus next control
+                    }
+                }
+                else
+                    dgv.CurrentCell = dgv[iColumn + 1, iRow];
+
+            }
         }
     }
 }

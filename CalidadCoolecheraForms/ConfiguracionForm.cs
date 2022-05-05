@@ -28,7 +28,7 @@ namespace CalidadCoolecheraForms
         {
             var cadenaconexion = Properties.Settings.Default.Properties["cadenaconexion"].DefaultValue.ToString();
             dConfigCal = new DaoConfiguracionCalidad(cadenaconexion);
-            bs.DataSource = dConfigCal.Listar();
+            bs.DataSource = dConfigCal.ListarVariables();
             enlazarControles();
         }
 
@@ -37,22 +37,7 @@ namespace CalidadCoolecheraForms
             dgv.DataSource = bs;
             dgv.AutoGenerateColumns = false;
         
-            DataGridViewColumn column4 = dgv.Columns[4];
-            DataGridViewColumn column5 = dgv.Columns[5];
-            DataGridViewColumn column6 = dgv.Columns[6];
-            DataGridViewColumn column7 = dgv.Columns[7];
-            DataGridViewColumn column8 = dgv.Columns[8];
-            DataGridViewColumn column9 = dgv.Columns[9];
-            DataGridViewColumn column10 = dgv.Columns[10];
-            DataGridViewColumn column11 = dgv.Columns[11];
-            column4.Visible = false;
-            column5.Visible = false;
-            column6.Visible = false;
-            column7.Visible = false;
-            column8.Visible = false;
-            column9.Visible = false;
-            column10.Visible = false;
-            column11.Visible = false;
+
             DataGridViewColumn column0 = dgv.Columns[0];
             DataGridViewColumn column1 = dgv.Columns[1];
             DataGridViewColumn column2 = dgv.Columns[2];
@@ -198,6 +183,30 @@ namespace CalidadCoolecheraForms
                 {
                     MessageBox.Show("Error no controlado " + ex.Message);
                 }
+            }
+        }
+
+        private void dgv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                int iColumn = dgv.CurrentCell.ColumnIndex;
+                int iRow = dgv.CurrentCell.RowIndex;
+                if (iColumn == dgv.ColumnCount - 1)
+                {
+                    if (dgv.RowCount > (iRow + 1))
+                    {
+                        dgv.CurrentCell = dgv[0, iRow + 1];
+                    }
+                    else
+                    {
+                        //focus next control
+                    }
+                }
+                else
+                    dgv.CurrentCell = dgv[iColumn + 1, iRow];
+
             }
         }
     }

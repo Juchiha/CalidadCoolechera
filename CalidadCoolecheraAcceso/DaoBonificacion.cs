@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CalidadModelos.Modelos;
 using Dapper;
 using System.Data;
+using CalidadCoolecheraModelos.Modelos;
 
 namespace CalidadCoolecheraAcceso
 {
@@ -30,6 +31,15 @@ namespace CalidadCoolecheraAcceso
             var bonificacion = pConexion.Conexion.Query<Bonificacion>(Lsql, transaction).ToList();
             return bonificacion;
         }
+
+        public List<DataGridBonificacion> ListarBonificaciones(IDbTransaction transaction = null)
+        {
+            var Lsql = "SELECT am_rangoinferior, am_rangosuperior, am_pagobacterias, am_pagofrio , am_valorfriovoluntario FROM calidad.bonificacion";
+            var bonificacion = pConexion.Conexion.Query<DataGridBonificacion>(Lsql, transaction).ToList();
+            return bonificacion;
+        }
+
+        
 
         public Bonificacion buscar(int am_rangoinferior, int am_rangosuperior , IDbTransaction transaction = null)
         {

@@ -229,6 +229,7 @@
             this.dgv.RowTemplate.Height = 25;
             this.dgv.Size = new System.Drawing.Size(503, 448);
             this.dgv.TabIndex = 0;
+            this.dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
             // 
             // BonificacionForm
             // 

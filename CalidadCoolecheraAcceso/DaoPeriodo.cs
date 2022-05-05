@@ -33,6 +33,14 @@ namespace CalidadCoolecheraAcceso
             return periodos;
         }
 
+        public List<DataGridPeriodo> ListarDataGridview(IDbTransaction transaction = null)
+        {
+            var Lsql = "SELECT ds_periodoliquidacion, am_numeroliquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos ORDER BY ds_periodoliquidacion ASC,am_numeroliquidacion ASC ";
+            var periodos = pConexion.Conexion.Query<DataGridPeriodo>(Lsql, transaction).ToList();
+            return periodos;
+        }
+        
+
         public List<ComboPeriodo> ListarParaCombox(IDbTransaction transaction = null)
         {
             var Lsql = "SELECT ds_periodoliquidacion as Id, CONCAT(ds_periodoliquidacion, '-', am_numeroliquidacion) as Nombre, am_numeroliquidacion as Liquidacion, ds_estadoperiodocda, ds_estadoperiodoasociado  FROM calidad.periodos ORDER BY ds_periodoliquidacion ASC,am_numeroliquidacion ASC ";
