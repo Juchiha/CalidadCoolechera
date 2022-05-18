@@ -52,6 +52,8 @@ namespace CalidadCoolecheraForms
             column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
+            column4.Visible = false;
+
             txtRangoInferior.DataBindings.Add("Text", bs, "am_rangoinferior");
             txtRangoSuperior.DataBindings.Add("Text", bs, "am_rangosuperior");
             txtPagoBacterias.DataBindings.Add("Text", bs, "am_pagobacterias");
@@ -206,7 +208,7 @@ namespace CalidadCoolecheraForms
                 e.SuppressKeyPress = true;
                 int iColumn = dgv.CurrentCell.ColumnIndex;
                 int iRow = dgv.CurrentCell.RowIndex;
-                if (iColumn == dgv.ColumnCount - 1)
+                if (iColumn == dgv.ColumnCount - 2)
                 {
                     if (dgv.RowCount > (iRow + 1))
                     {

@@ -35,7 +35,7 @@ namespace CalidadCoolecheraAcceso
 
         public List<DataGridCalidaLeche> buscar(string ds_periodoliquidacion, int am_numeroliquidacion,  IDbTransaction transaction = null)
         {
-            var strSQl = "select cal.dt_fechamuestra, cal.cd_codigoconsignante,  m.nombre as consignante,  cal.cd_codigofinca, fin.nombre as nombrefinca, cal.am_valorsolidostotales, cal.am_valorunidadformadoracolonias from calidad.calidad_leche cal join calidad.mtconsignante m  on m.codconsignante  = cal.cd_codigoconsignante JOIN calidad.mtfinca fin ON fin.codfinca = cal.cd_codigofinca and fin.codconsignante  = cal.cd_codigoconsignante  where ds_periodoliquidacion = @ds_periodoliquidacion AND am_numeroliquidacion = @am_numeroliquidacion ";
+            var strSQl = "select cal.dt_fechamuestra, cal.cd_codigoconsignante,  m.nombre as consignante,  cal.cd_codigofinca, fin.nombre as nombrefinca, cal.am_valorsolidostotales, cal.am_valorunidadformadoracolonias from calidad.calidad_leche cal join calidad.mtconsignante m  on m.codconsignante  = cal.cd_codigoconsignante JOIN calidad.mtfinca fin ON fin.codigosap = cal.cd_codigofinca and fin.codconsignante  = cal.cd_codigoconsignante  where ds_periodoliquidacion = @ds_periodoliquidacion AND am_numeroliquidacion = @am_numeroliquidacion ";
             var Calidad_Leche = pConexion.Conexion.Query<DataGridCalidaLeche>(strSQl, new { ds_periodoliquidacion = ds_periodoliquidacion, am_numeroliquidacion = am_numeroliquidacion}, transaction).ToList();
             return Calidad_Leche;
         }

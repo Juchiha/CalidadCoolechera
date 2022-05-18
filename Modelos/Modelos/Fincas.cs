@@ -18,18 +18,8 @@ namespace CalidadCoolecheraModelos.Modelos
         public DateTime fechamod { get; set; }
         public string estadoreg { get; set; }
 
+        public string codigosap { get; set; }
         public Finca() { }
-        public Finca(string codfinca, string nombre, string codconsignante, string codruta, string codplanta, string codfincaasociada, string usuario, DateTime fechamod, string estadoreg)
-        {
-            this.codfinca = codfinca;
-            this.nombre = nombre;
-            this.codconsignante = codconsignante;
-            this.codruta = codruta;
-            this.codplanta = codplanta;
-            this.codfincaasociada = codfincaasociada;
-            this.usuario = usuario;
-            this.fechamod = fechamod;
-            this.estadoreg = estadoreg;
-        }
+       
     }
 }

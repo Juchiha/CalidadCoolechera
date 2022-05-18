@@ -52,6 +52,7 @@ namespace CalidadCoolecheraForms
             DataGridViewColumn column6 = dataGridFincas.Columns[6];
             DataGridViewColumn column7 = dataGridFincas.Columns[7];
             DataGridViewColumn column8 = dataGridFincas.Columns[8];
+            DataGridViewColumn column9 = dataGridFincas.Columns[9];
             column2.Visible = false;
             column4.Visible = false;
             column5.Visible = false;
@@ -62,21 +63,23 @@ namespace CalidadCoolecheraForms
             column0.HeaderText = "Codigo Finca";
             column1.HeaderText = "Nombre Finca";
             column2.HeaderText = "Planta";
+            column9.HeaderText = "Codigo SAP";
 
             column0.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            column9.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             column0.ReadOnly = true;
             column1.ReadOnly = true;
             column2.ReadOnly = true;
-
+            column9.ReadOnly = true;
         }
 
         private void dataGridFincas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //MessageBox.Show(dataGridFincas.Rows[e.RowIndex].Cells[0].Value.ToString());
-            this.codigoFincaSeleccionada = dataGridFincas.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.codigoFincaSeleccionada = dataGridFincas.Rows[e.RowIndex].Cells[9].Value.ToString();
             this.nombreFincaSeleccionada = dataGridFincas.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.Close();
         }

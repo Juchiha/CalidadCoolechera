@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "OQI0YlAGXjYTOxqicLtZPLpz5YsCajYOpUIDuyaJhtUmp/XxtlWdpQm0NMR6QgAFH/jv29x/SqZTe3KFbZD96Q==",
+  "dgSpecHash": "BmaFm9sd9cPHXGEzdNs+zKmy5YZmq+zYToen4kDi7/oEf7DhCmUJ1tZj87a/kyWOK3nKqgE1ShY9xZFHog8EqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraForms\\CalidadCoolecheraForms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jose Giron\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Jose Giron\\.nuget\\packages\\npgsql\\6.0.3\\npgsql.6.0.3.nupkg.sha512",
-    "C:\\Users\\Jose Giron\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

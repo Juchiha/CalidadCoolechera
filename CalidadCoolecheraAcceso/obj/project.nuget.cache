@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "a0F3c7JSLW2rAP8kEsV1Z6Re/k2S1grEE2M8INVCgB9KuTS+RKjYmGWnMeak9k3DKnDcxysqD/hPHT6JjUG4yA==",
+  "dgSpecHash": "hGEPkxAzoZ0Bu+6ejEWyOxNn9ZifEIZBVl9IZhH4TDEPOV/PbWRGTQOS0dpR71+HmdFHYJCmJwPxYKB0+Vfx+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jose Giron\\source\\repos\\CalidadCoolechera\\CalidadCoolecheraAcceso\\CalidadCoolecheraAcceso.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jose Giron\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Jose Giron\\.nuget\\packages\\npgsql\\6.0.3\\npgsql.6.0.3.nupkg.sha512",
-    "C:\\Users\\Jose Giron\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Jose Giron\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

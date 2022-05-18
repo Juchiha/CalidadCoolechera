@@ -182,7 +182,7 @@ namespace CalidadCoolecheraForms
                 {
                     string codigoFinca = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                     string codigoConsignante = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    getPromediosParaText(codigoConsignante, codigoFinca);
+                    getPromediosParaText(codigoConsignante, codigoFinca, 0, 0);
                 }
                 
 
@@ -193,32 +193,95 @@ namespace CalidadCoolecheraForms
         {
             List<ComboPeriodo> cmbNPeriodos = new List<ComboPeriodo>();
             string liquidacion = cmBNew.Liquidacion;
-            int periodoLiquidar = Int32.Parse(cmBNew.Id);
+            int periodoLiquidar;
+            string periodo = cmBNew.Id;
             for (int i = 1; i <= 3; i++)
             {
+               
                 if (liquidacion.Equals("1"))
                 {
-                    periodoLiquidar = periodoLiquidar - 1;
+                    string codigoConsignante = periodo.Substring(4, 2);
+                    if (codigoConsignante.Equals("01"))
+                    {
+                        string anho = periodo.Substring(0, 4);
+                        periodoLiquidar = Int32.Parse(anho);
+                        periodoLiquidar = periodoLiquidar - 1;
+                        periodo = periodoLiquidar + "12";
+                    }
+                    else
+                    {
+                        periodoLiquidar = Int32.Parse(periodo);
+                        periodoLiquidar = periodoLiquidar - 1;
+                        periodo = Convert.ToString(periodoLiquidar);
+                    }
+                    
                     liquidacion = "2";
                 }
                 else
                 {
                     liquidacion = "1";
                 }
+
                 ComboPeriodo box = new ComboPeriodo();
-                box.Id = Convert.ToString(periodoLiquidar);
+                box.Id = periodo;
                 box.Liquidacion = liquidacion;
                 cmbNPeriodos.Add(box);
             }
             return cmbNPeriodos;
         }
 
-        public void getPromediosParaText(String codigoConsignante, string codigoFinca)
+        public List<ComboPeriodo> getLastTreePeriodosForText(ComboPeriodo cmBNew)
+        {
+            List<ComboPeriodo> cmbNPeriodos = new List<ComboPeriodo>();
+            string liquidacion = cmBNew.Liquidacion;
+            int periodoLiquidar;
+            string periodo = cmBNew.Id;
+            ComboPeriodo box = new ComboPeriodo();
+            box.Id = periodo;
+            box.Liquidacion = liquidacion;
+            cmbNPeriodos.Add(box);
+
+            for (int i = 1; i <= 2; i++)
+            {
+
+                if (liquidacion.Equals("1"))
+                {
+                    string codigoConsignante = periodo.Substring(4, 2);
+                    if (codigoConsignante.Equals("01"))
+                    {
+                        string anho = periodo.Substring(0, 4);
+                        periodoLiquidar = Int32.Parse(anho);
+                        periodoLiquidar = periodoLiquidar - 1;
+                        periodo = periodoLiquidar + "12";
+                    }
+                    else
+                    {
+                        periodoLiquidar = Int32.Parse(periodo);
+                        periodoLiquidar = periodoLiquidar - 1;
+                        periodo = Convert.ToString(periodoLiquidar);
+                    }
+
+                    liquidacion = "2";
+                }
+                else
+                {
+                    liquidacion = "1";
+                }
+
+                box = new ComboPeriodo();
+                box.Id = periodo;
+                box.Liquidacion = liquidacion;
+                cmbNPeriodos.Add(box);
+            }
+            return cmbNPeriodos;
+
+        }
+        public void getPromediosParaText(String codigoConsignante, string codigoFinca, double valorSolidos, double valorUFCML)
         {
             ComboPeriodo cmb = (ComboPeriodo)cmbPeriodo.SelectedItem;
             if (cmb != null)
             {
-                List<ComboPeriodo> cmbNPeriodos = getLastTreePeriodos(cmb);
+                List<ComboPeriodo> cmbNPeriodos = getLastTreePeriodosForText(cmb);
                 CalidadLeche caLeche = new CalidadLeche();
                 caLeche.cd_codigoconsignante = codigoConsignante;
                 caLeche.cd_codigofinca = codigoFinca;
@@ -234,21 +297,38 @@ namespace CalidadCoolecheraForms
                     double promUfc2 = 0;
                     double promUfc3 = 0;
 
+                    double bonVolFrio1 = promediar[0].am_bonificacionvoluntariafria;
+                    double bonVolFrio2 = 0;
+                    double bonVolFrio3 = 0;
+
+                    double bonUfc1 = promediar[0].am_bonificacionformadoracolonias;
+                    double bonUfc2 = 0;
+                    double bonUfc3 = 0;
+
+                    double bonfrio1 = promediar[0].am_bonificacionformadoracoloniasfria;
+                    double bonfrio2 = 0;
+                    double bonfrio3 = 0;
+
                     if (promediar.Count > 1)
                     {
                         promSol2 = promediar[1].am_promediosolidostotales;
                         promUfc2 = promediar[1].am_promediounidadformadoracolonias;
+                        bonVolFrio2 = promediar[1].am_bonificacionvoluntariafria;
+                        bonUfc2 = promediar[1].am_bonificacionformadoracolonias;
+                        bonfrio2 = promediar[1].am_bonificacionformadoracoloniasfria;
 
                     }
                     if (promediar.Count > 2)
                     {
                         promSol3 = promediar[2].am_promediosolidostotales;
                         promUfc3 = promediar[2].am_promediounidadformadoracolonias;
+                        bonVolFrio3 = promediar[2].am_bonificacionvoluntariafria;
+                        bonUfc3 = promediar[2].am_bonificacionformadoracolonias;
+                        bonfrio3 = promediar[2].am_bonificacionformadoracoloniasfria;
                     }
                     txtSolidos1.Text = promSol1.ToString();
-                    
                     txtSolidos2.Text = promSol2.ToString();
-                    txtSolidos3.Text = promSol3.ToString(); 
+                    txtSolidos3.Text = promSol3.ToString();
                     double promedioSolidos = promSol1 + promSol2 + promSol3 / promediar.Count;
                     txtPromedioSolidos.Text = promedioSolidos.ToString();
 
@@ -258,19 +338,49 @@ namespace CalidadCoolecheraForms
                     double promedioUFC = promUfc1 + promUfc2 + promUfc3 / promediar.Count;
                     txtPromedioUfc.Text = promedioUFC.ToString();
 
+                    double promedioBonUFC = bonUfc3 + bonUfc2 + bonUfc1 / promediar.Count;
+                    double promedioBonUFCFria = bonfrio3 + bonfrio2 + bonfrio1 / promediar.Count;
+                    double promedioVolunBon = bonVolFrio1 + bonVolFrio2 + bonVolFrio3 / promediar.Count;
+                    txtBonFrio.Text = promedioBonUFCFria.ToString();
+                    txtBonUfcBon.Text = promedioBonUFC.ToString();
+                    txtBonVol.Text = promedioVolunBon.ToString();
                 }
                 else
                 {
-                    
-                    txtSolidos1.Text = "0";
-                    txtSolidos2.Text = "0";
-                    txtSolidos3.Text = "0";
-                    txtPromedioSolidos.Text = "0";
+                    if (valorSolidos != 0)
+                    {
+                        txtSolidos1.Text = valorSolidos.ToString();
+                        txtSolidos2.Text = "0";
+                        txtSolidos3.Text = "0";
+                        txtPromedioSolidos.Text = valorSolidos.ToString();
+                    }
+                    else
+                    {
+                        txtSolidos1.Text = "0";
+                        txtSolidos2.Text = "0";
+                        txtSolidos3.Text = "0";
+                        txtPromedioSolidos.Text = "0";
+                    }
 
-                    txtUfc1.Text = "0";
-                    txtUfc2.Text = "0";
-                    txtUfc3.Text = "0";
-                    txtPromedioUfc.Text = "0";
+                    if (valorUFCML != 0)
+                    {
+                        txtUfc1.Text = valorUFCML.ToString();
+                        txtUfc2.Text = "0";
+                        txtUfc3.Text = "0";
+                        txtPromedioUfc.Text = valorUFCML.ToString();
+                    }
+                    else
+                    {
+                        txtUfc1.Text = "0";
+                        txtUfc2.Text = "0";
+                        txtUfc3.Text = "0";
+                        txtPromedioUfc.Text = "0";
+                    }
+
+                    txtBonFrio.Text = "0";
+                    txtBonUfcBon.Text = "0";
+                    txtBonVol.Text = "0";
+
                 }
             }
         }
@@ -500,7 +610,7 @@ namespace CalidadCoolecheraForms
             if (bs.Current != null)
             {
                 var calidadLeche = (DataGridCalidaLeche)bs.Current;
-                getPromediosParaText(calidadLeche.cd_codigoconsignante, calidadLeche.cd_codigofinca);
+                getPromediosParaText(calidadLeche.cd_codigoconsignante, calidadLeche.cd_codigofinca, calidadLeche.am_valorsolidostotales, calidadLeche.am_valorunidadformadoracolonias);
             }
            
         }
